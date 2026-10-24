@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10070f">
+<title>A Little World for Ashan ♥</title>
+<style>
+:root{--bg:#0c070d;--panel:#1b0d19;--panel2:#251020;--pink:#ff6fae;--rose:#d83f7c;--gold:#e9c887;--muted:#c7aebf;--line:#63304b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#38122b 0,#160b18 38%,var(--bg) 76%);color:#fff3fa;font-family:Georgia,'Times New Roman',serif;min-height:100vh}button,input,textarea{font:inherit}button{cursor:pointer}.hidden{display:none!important}
+.topline{height:3px;background:linear-gradient(90deg,#8b2855,var(--pink),var(--gold),#8b2855)}
+.wrap{width:min(100% - 28px,920px);margin:auto}.eyebrow{letter-spacing:.22em;text-transform:uppercase;font:600 .7rem Arial,sans-serif;color:var(--gold)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.4rem,8vw,5.2rem);line-height:1.04;margin:14px 0}h2{font-size:clamp(1.8rem,5vw,3rem);margin-bottom:12px}h3{color:var(--gold)}p{line-height:1.75;color:#ead8e4}.script{font-style:italic;color:#ffb0ce}.muted{color:var(--muted)}.center{text-align:center}.section{padding:30px 0 60px}.card{background:linear-gradient(145deg,rgba(48,19,42,.94),rgba(19,10,20,.97));border:1px solid rgba(255,111,174,.25);border-radius:22px;padding:22px;box-shadow:0 16px 55px #0005}.btn{border:0;border-radius:999px;padding:13px 19px;background:linear-gradient(100deg,#f65f9e,#bd2e70);color:white;font-weight:bold;box-shadow:0 7px 25px #f0448c33;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.secondary{background:#281424;border:1px solid #81405f;box-shadow:none}.btn.gold{background:linear-gradient(100deg,#e9c887,#b88442);color:#1b0d19}.btnrow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.hero{min-height:100svh;display:grid;place-items:center;padding:40px 0;position:relative;overflow:hidden}.hero:before,.hero:after{content:"✦";position:absolute;color:#ff8cba66;font-size:2rem;animation:float 5s ease-in-out infinite}.hero:before{top:17%;left:12%}.hero:after{right:13%;bottom:18%;animation-delay:1.5s}@keyframes float{50%{transform:translateY(-18px) rotate(18deg);opacity:1}}.portal{width:150px;height:150px;border-radius:50%;margin:28px auto;background:radial-gradient(circle,#ffb5d4 0,#f0448c 26%,#7c1a4e 54%,#190a1a 72%);box-shadow:0 0 24px #ff529c,0 0 80px #e82b8055;display:grid;place-items:center;font-size:4rem;animation:pulse 3s infinite}@keyframes pulse{50%{box-shadow:0 0 38px #ff529c,0 0 110px #e82b8080;transform:scale(1.03)}}.passwordbox{max-width:380px;margin:24px auto 0}.field{width:100%;border-radius:12px;padding:13px 14px;border:1px solid #79405e;background:#100911;color:#fff;outline:none;margin:8px 0 12px}.field:focus{border-color:var(--pink)}textarea.field{min-height:110px;resize:vertical}.nav{position:sticky;top:0;z-index:10;background:#10080feF;border-bottom:1px solid #54263f;backdrop-filter:blur(12px)}.navinner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}.brand{font-weight:bold;color:#ffd0e2}.nav button{background:transparent;border:1px solid #5f2d49;color:#f9d9e8;border-radius:99px;padding:8px 12px}.roomgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:25px}.room{min-height:150px;text-align:left;position:relative;overflow:hidden}.room .emoji{font-size:2rem;display:block;margin-bottom:15px}.room strong{display:block;font-size:1.05rem;color:#fff}.room small{display:block;color:#c9a8bc;line-height:1.5;margin-top:7px}.room:after{content:"✧";position:absolute;right:16px;top:12px;color:#e9c88766;font-size:1.4rem}.timeline{border-left:1px solid #a14b75;margin:24px 0 0 8px;padding-left:22px}.moment{position:relative;margin:0 0 20px}.moment:before{content:"♥";position:absolute;left:-32px;top:0;color:var(--pink)}.date{color:var(--gold);font:700 .75rem Arial,sans-serif;letter-spacing:.1em;margin-bottom:7px}.storytext{white-space:pre-line}.uploadgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.preview{width:100%;max-height:280px;object-fit:cover;border-radius:13px;border:1px solid #6a3450;margin-top:10px}.mediaitem{min-width:0}.pill{display:inline-block;padding:6px 10px;border-radius:99px;border:1px solid #78405e;color:#f9bad3;font: .75rem Arial,sans-serif}.letter{font-size:1.12rem;line-height:1.95;white-space:pre-line}.envelope{font-size:5rem;cursor:pointer;filter:drop-shadow(0 0 22px #ff679b66)}.gamebox{min-height:190px;display:grid;place-items:center;text-align:center}.balloons{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}.balloon{border:0;border-radius:50% 50% 45% 45%;width:76px;height:92px;color:white;font-size:1.8rem;background:linear-gradient(135deg,#ff9bc4,#b72769);box-shadow:inset -8px -8px 15px #6e174d55,0 0 20px #e64c8c33;position:relative}.balloon:nth-child(2){background:linear-gradient(135deg,#d6b5ff,#7046a6)}.balloon:nth-child(3){background:linear-gradient(135deg,#ffe0a0,#b47a37)}.balloon:after{content:"";position:absolute;bottom:-10px;left:36px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:12px solid #d85b94}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.photo-grid img,.photo-grid video{width:100%;border-radius:14px;border:1px solid #6a3450}.footer{padding:35px 0 50px;text-align:center;color:#a98a9f;font-size:.85rem}.small{font-size:.88rem}.divider{height:1px;background:linear-gradient(90deg,transparent,#7e3d5c,transparent);margin:25px 0}
+@media(min-width:650px){.roomgrid{grid-template-columns:repeat(3,minmax(0,1fr))}.uploadgrid,.photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card{padding:28px}.section{padding-top:45px}}
+@media(max-width:380px){.roomgrid{grid-template-columns:1fr}.navinner{align-items:flex-start}.nav button{padding:7px 9px}.card{padding:17px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<section id="gate" class="hero">
+ <div class="wrap center">
+  <div class="eyebrow">A little universe, made with love</div>
+  <div class="portal">♥</div>
+  <p class="script" style="font-size:1.35rem">Some stories don't need a label.</p>
+  <h1>For Ashan,<br><span class="script">from my heart.</span></h1>
+  <p style="max-width:540px;margin:0 auto">A little world of our memories, silly moments, unsaid words and all the things that make you special to me.</p>
+  <div class="card passwordbox">
+   <label for="pass" class="small muted">This little world is just for you</label>
+   <input id="pass" class="field" type="password" placeholder="Enter our secret password" autocomplete="off">
+   <button class="btn" id="enter">Open our world ♥</button>
+   <p id="passmsg" class="small muted" style="margin:12px 0 0">Set your password in the website file before sharing.</p>
+  </div>
+  <p class="small muted" style="margin-top:24px">Made for Ashan · with love, always</p>
+ </div>
+</section>
+<div id="site" class="hidden">
+ <header class="nav"><div class="wrap navinner"><div class="brand">♥ Ashan's World</div><div><button data-page="home">Home</button> <button data-page="story">Our Story</button> <button data-page="world">Explore ✧</button></div></div></header>
+ <main class="wrap">
+  <section id="page-home" class="section center">
+   <div class="eyebrow">Welcome to your little universe</div><h1 style="font-size:clamp(2.5rem,8vw,4.7rem)">Happy Birthday,<br><span class="script">Ashan ♥</span></h1>
+   <p style="max-width:650px;margin:0 auto 22px">Aaj ki duniya mein ek chhoti si jagah sirf aap ke liye hai. Yahan meri yaadein hain, hamari kahani hai, kuch hansi wale pal hain aur kuch baatein jo main dil se kehna chahti hoon.</p>
+   <div class="portal">✦</div><button class="btn" data-page="world">Enter Birthday World →</button>
+   <div class="divider"></div>
+   <div class="card"><span class="eyebrow">A little note</span><h2 class="script">“You became a part of my everyday.”</h2><p>12 January 2024 ko ek chhoti si accidental snap se jo baat shuru hui thi, uska itna khoobsurat safar ban jana — kabhi kabhi soch kar ab bhi muskurahat aa jati hai.</p></div>
+  </section>
+  <section id="page-world" class="section hidden">
+   <div class="center"><div class="eyebrow">Choose a door</div><h2>Welcome to the Birthday World ✨</h2><p>Har room mein ek alag surprise hai. Apni marzi se explore karein.</p></div>
+   <div class="roomgrid">
+    <button class="card room" data-page="story"><span class="emoji">📖</span><strong>Our Untold Story</strong><small>Woh din jab sab shuru hua.</small></button>
+    <button class="card room" data-page="memories"><span class="emoji">📸</span><strong>Memory Gallery</strong><small>Photos aur videos ke liye apni jagah.</small></button>
+    <button class="card room" data-page="wishes"><span class="emoji">🎈</span><strong>Wishes Garden</strong><small>Pop a balloon, unlock a thought.</small></button>
+    <button class="card room" data-page="games"><span class="emoji">🎮</span><strong>Little Fun Corner</strong><small>Ek chhota sa birthday game.</small></button>
+    <button class="card room" data-page="letter"><span class="emoji">💌</span><strong>Secret Letter</strong><small>Kuch alfaaz sirf aap ke liye.</small></button>
+    <button class="card room" data-page="ending"><span class="emoji">🎁</span><strong>Final Surprise</strong><small>Aakhir mein ek dil ki baat.</small></button>
+    <button class="card room" data-page="custom"><span class="emoji">🕯️</span><strong>Make a Wish</strong><small>Candle blow karein aur wish maangein.</small></button>
+    <button class="card room" data-page="music"><span class="emoji">🎵</span><strong>Our Soundtrack</strong><small>Apni music file add karein.</small></button>
+    <button class="card room" data-page="personalize"><span class="emoji">🪄</span><strong>Personalize</strong><small>Apni photos, videos aur text add karein.</small></button>
+   </div>
+  </section>
+  <section id="page-story" class="section hidden">
+   <div class="eyebrow">Chapter by chapter</div><h2>Our Untold Story <span class="script">♥</span></h2>
+   <p>Yeh kahani kisi label se zyada hamare un palon ki hai jo waqt ke saath mere liye khaas bante gaye.</p>
+   <div class="timeline">
+    <article class="moment"><div class="date">12 JANUARY 2024 · 7:00 PM</div><h3>Ek accidental snap</h3><p class="storytext">Mujhe naya naya mobile mila tha aur Ashan ko bhi Karachi aaye zyada waqt nahi hua tha. Maghrib ka waqt tha, main noodles bana kar apni friend ko snap send kar rahi thi. Light chali gayi to Wi-Fi band ho gaya, maine mobile data on kiya aur snap send kar di. Pata nahi kaise, woh Ashan ko bhi chali gayi — aur bas, yahin se hamari baat shuru hui.
+
+Ashan ka message aaya, “Assalamualaikum.” Phir hum dono ne ek doosre se poocha, “Aap kaun?” Ashan ne kaha, “Aap wohi jo main samajh raha hoon?” Maine kaha, “Aap wohi jo main samajh rahi hoon?” Aur phir dono ne kaha, “Ji, main bhi wohi.” Aaj bhi sochun to is chhoti si baat par hansi aa jati hai.</p></article>
+    <article class="moment"><div class="date">JANUARY – MAY 2024</div><h3>Roz ki baatein</h3><p class="storytext">Us din ke baad hum roz baat karne lage. Koi aisa din yaad nahi aata jab baat na hui ho. Ashan apni doodh-badar wali shop par kaam mein busy hote, lekin jaise hi do minute milte, mujhe message kar dete. Dheere dheere woh hamare din ka hissa ban gaya.
+
+8 May 2024 ko mera Urdu ka paper tha aur main raat ko tayari kar rahi thi. Baaton baaton mein maine rough page par “Eman” likha aur beech mein Ashan ke naam bhi chhupa diye. Maine photo bhej kar kaha ke naam dhoondh lein; agar dhoondh liya to main unki har baat sunungi. Ashan ne naam dhoondh liya, lekin jab maine poocha ab kya kehna hai, to bole “abhi nahi, phir kabhi.” Maine zid ki to unhon ne kaha ke unki dosti aage barhti ja rahi hai. Main do minute chup rahi, phir kaha ke mere Ammi Abu jo faisla karein ge, main wohi karungi. Ashan ne kaha ke woh sab ko mana lein ge. Us waqt woh baat pending reh gayi, lekin mere dil mein bohat kuch badalne laga.</p></article>
+    <article class="moment"><div class="date">9–10 JULY 2024</div><h3>Pehli mulaqat aur chai</h3><p class="storytext">June mein ghar wale Punjab chale gaye aur main Urooj ke saath Karachi mein thi. 9 July ki raat Ashan ghar aaye to Urooj so rahi thi. Ashan chai banane aaye, to maine kaha, “Main bana deti hoon.” Main bohat nervous thi aur sharam bhi aa rahi thi. Chai banayi aur Ashan wahin kharay ho kar peete rahe. Hum der tak baatein karte rahe, haath pakra aur apni heights bhi match ki. Woh hamari pehli mulaqat thi.
+
+Agli subah 10 July ko bhi hum mile. Phir 24 July ko raat ke teen baje mile aur maine Ashan ke haath par kiss bhi ki. 26 July ko bhi mulaqat hui. Yeh chhote chhote pal mere liye bohat khaas ban gaye.</p></article>
+    <article class="moment"><div class="date">OCTOBER 2024</div><h3>Ek poora mahina, bohat si yaadein</h3><p class="storytext">October mein Ammi aur Aliza dobara Punjab gayin. Is baar main aur Ashan lagbhag poora mahina roz milte rahe. Woh waqt bohat pyara tha — baatein, hansna, saath waqt guzarna. Beech mein do teen aur mulaqatein bhi hoti rahin. Har din apni jagah ek yaad ban gaya.</p></article>
+    <article class="moment"><div class="date">31 MARCH – 4 APRIL 2025</div><h3>Chhoti birthday, badi khushi</h3><p class="storytext">31 March ko ghar wale Punjab chale gaye, lekin mere 9th class ke papers ki wajah se main Karachi mein reh gayi. Ashan bhi kuch din yahin thay. 1 April ko hum mile aur 2 April ko Ashan ne meri chhoti si birthday celebrate ki. Chhoti thi, lekin mere liye bohat achhi thi. 3 April ko main, Ashan aur Urooj Imtiaz gaye; bohat maza aaya. 4 April ko Ashan ko Punjab jana tha, kyunki unki behan ki shaadi thi.</p></article>
+    <article class="moment"><div class="date">2 MAY 2025</div><h3>Ocean Mall wali mulaqat</h3><p class="storytext">Mera aakhri paper 2 May ko tha. Friends ne Ocean Mall ka plan banaya. Maine Ashan ko bataya to unhon ne kaha, free ho kar batana, main bhi aa jaunga. Main friends ke saath ek do ghante rahi; phir woh chali gayin aur Ashan aa gaye. Humne movie dekhi, bohat baatein ki aur khoob enjoy kiya. Us din ki khushi aaj bhi yaad hai.</p></article>
+    <article class="moment"><div class="date">24 MAY – 13 JUNE 2026</div><h3>Punjab ka safar</h3><p class="storytext">24 May ko hum sab family ke saath Punjab gaye. Train mein family ke saamne khul kar baat nahi kar sakte thay, is liye aankhon ke ishare aur messages se baatein hoti rahin. Ashan ne mujhe Sting bhi la kar di. Jhung/Mail pohnch kar family ke saath milna, cousins ke saath rehna, chand raat ko sab ka ek jaisi churiyan pehenna aur Eid par ghoomna — sab bohat yaadgaar tha.
+
+Ek raat meri tabiyat bohat kharab ho gayi aur BP low ho gaya. Sab so rahe thay, Ashan jaag rahe thay. Unhon ne paani diya, sar, kamar, haath aur paon dabaye aur haath wale pankhay se hawa di. Un dinon unhon ne mere liye chocolate bhi la kar di thi. Us waqt unka mera khayal rakhna main nahi bhool sakti.
+
+Family ki dawat mein dono ghar walon ne saath bohat kaam kiya, khana serve kiya, baatein ki aur bartan dhotay hue bhi itna hansay ke thakan mehsoos nahi hui. Ek din hamare blue kapray bhi match ho gaye aur behnon ne mazaak banaya. Kasur ke Funville aur Baba Kamal Chishti ke mazar par bhi gaye. Ashan ne mujhe ship wala jhoola teen baar khilaya, cup wala jhoola bhi, aur mazar par bracelet diya. Wapas aane se pehle station par Ashan ne mujh se haath milaya. Train late thi aur mausam bhi kharab tha, magar sab se mushkil baat wapas aana tha — kyunki hum sab ne saath bohat achha waqt guzara tha. Hum 13 June ko Karachi pohnche.</p></article>
+    <article class="moment"><div class="date">JUNE – AUGUST 2026</div><h3>Woh waqt jo aasaan nahi tha</h3><p class="storytext">Karachi aane ke baad 20 June se hamari laraiyan shuru ho gayin. Main ne kabhi nahi socha tha ke ek din apne munh se Ashan ko “rishta bhej dein” jaisi baat kahungi. Lekin main pareshan thi aur mere dil mein bohat si fikrein thi. Hamari laraiyan taqreeban do mahine chalti rahin. Ashan 28 August ko Karachi aaye, tab bhi baat foran theek nahi hui; baad mein humne cheezein suljhane ki koshish ki.
+
+Mujhe bas yeh samjhana hai ke mera maqsad kabhi Ashan ko tension dena ya un par bojh dalna nahi. Main chahti hoon ke mera naam kisi aur ke saath na jure, siwaye unke. Main jaanti hoon ke abhi hum dono ko bohat kuch karna hai, struggle karni hai aur waqt dena hai. Main sirf chahti hoon ke jab munasib ho, family ko bata kar hamare baare mein baat shuru ho sake. Baqi sab apne waqt par.</p></article>
+   </div>
+   <div class="card" style="margin-top:26px"><h3 class="script">Aur kahani abhi baqi hai…</h3><p>Yeh hamari kahani ka woh hissa hai jo main apne dil mein sambhal kar rakhti hoon. Aage ke pages mein hamari photos, videos aur woh yaadein hongi jo alfaaz se bhi zyada keh deti hain.</p><button class="btn" data-page="memories">Open Memory Gallery →</button></div>
+  </section>
+  <section id="page-memories" class="section hidden">
+   <div class="eyebrow">Little moments, forever saved</div><h2>Memory Gallery 📸</h2><p>Apni photos aur videos yahan select karein. Yeh preview isi browser mein dikhega; share karne ke liye media ko website ke saath host karna hoga.</p>
+   <div class="card"><label>Choose photos or videos<input class="field" type="file" id="galleryFiles" accept="image/*,video/*" multiple></label><div id="gallery" class="photo-grid"></div><p class="small muted">Tip: website folder mein images/videos rakh kar file names se bhi add kar sakti hain, ya is page par preview ke liye select karein.</p></div>
+   <div class="divider"></div><div class="card"><h3>Caption for your memories</h3><textarea id="captionInput" class="field" placeholder="Yahan apni yaad ke neeche likhne wala caption likhein..."></textarea><button class="btn" id="saveCaption">Save caption in this browser</button><p id="captionSaved" class="small muted"></p></div>
+  </section>
+  <section id="page-wishes" class="section hidden">
+   <div class="eyebrow">Three little wishes</div><h2>Wishes Garden 🎈</h2><p>Har balloon ke andar ek baat hai jo main chahti hoon Ashan hamesha yaad rakhein.</p>
+   <div class="balloons"><button class="balloon" data-wish="0" aria-label="Pop balloon one">♥</button><button class="balloon" data-wish="1" aria-label="Pop balloon two">♥</button><button class="balloon" data-wish="2" aria-label="Pop balloon three">♥</button></div>
+   <div id="wishText" class="card center" style="margin-top:25px;min-height:125px"><p class="muted">Kisi balloon ko pop karein ✨</p></div>
+   <div class="card" style="margin-top:18px"><h3>Birthday wish</h3><p>Allah aapki zindagi mein sukoon, sehat, halal rizq, kamyabi aur bohat si khushiyan de. Aapke dil ki achhi duaein qabool hon aur har mushkil ke baad aasani aaye. Ameen. 🤍</p></div>
+  </section>
+  <section id="page-games" class="section hidden">
+   <div class="eyebrow">A tiny birthday game</div><h2>Little Fun Corner 🎮</h2><div class="card gamebox"><div><div style="font-size:3rem">🎁</div><h3>Choose your surprise box</h3><p>Teen boxes mein se ek select karein.</p><div class="btnrow"><button class="btn secondary giftbox" data-gift="0">🎁 Box 1</button><button class="btn secondary giftbox" data-gift="1">🎁 Box 2</button><button class="btn secondary giftbox" data-gift="2">🎁 Box 3</button></div><p id="giftResult" style="margin:20px 0 0"></p></div></div>
+   <div class="card" style="margin-top:18px"><h3>Memory quiz</h3><p>Hamari baat kis din shuru hui thi?</p><div class="btnrow"><button class="btn secondary quiz" data-correct="false">8 May 2024</button><button class="btn secondary quiz" data-correct="true">12 January 2024</button><button class="btn secondary quiz" data-correct="false">2 May 2025</button></div><p id="quizResult" class="center" style="margin:15px 0 0"></p></div>
+  </section>
+  <section id="page-letter" class="section hidden center">
+   <div class="eyebrow">A few words from my heart</div><h2>One little letter…</h2><p class="muted">Ashan, yeh aap ke liye hai.</p><button class="envelope" id="openLetter" aria-label="Open letter">💌</button>
+   <div id="letterContent" class="card hidden" style="text-align:left;margin-top:15px"><p class="letter">Ashan,
+
+Kabhi kabhi mujhe khud hairani hoti hai ke ek accidental snap se shuru hone wali baat meri zindagi ki itni khaas kahani kaise ban gayi. 12 January 2024 ki woh shaam mujhe hamesha yaad rahegi.
+
+Mujhe hamari roz ki baatein, aapka busy hone ke bawajood waqt nikal kar message karna, woh pehli chai, woh mulaqatein, Punjab ki yaadein, family ke saath hansna aur woh chhoti chhoti cheezein yaad rehti hain jo shayad doosron ke liye aam hon, lekin mere liye bohat khaas hain.
+
+Main jaanti hoon ke har waqt sab kuch aasaan nahi hota. Humse ghaltiyan bhi hoti hain aur kabhi baat samjhana mushkil ho jata hai. Lekin meri baat ka maqsad aapko pareshan karna nahi. Main bas chahti hoon ke meri feelings ko samjha jaye aur hum izzat, samajh aur sukoon ke saath apni zindagi ke faislay karein.
+
+Aaj aapke birthday par meri dua hai ke Allah aapko sehat, kamyabi, barkat aur dil ka sukoon de. Aapki mehnat rang laaye, aapke raste aasaan hon aur aap hamesha khush rahein.
+
+Happy Birthday, Ashan. Aap mere liye bohat special hain — apne usi alag, apne se ehsaas ke saath. ♥</p><div class="center"><span class="script">— Eman</span></div></div>
+  </section>
+  <section id="page-custom" class="section hidden center">
+   <div class="eyebrow">Close your eyes for a second</div><h2>Make a Wish ✨</h2><div style="font-size:6rem;filter:drop-shadow(0 0 20px #ffb45c66)" id="candle">🕯️</div><p>Ek wish maangein, phir candle ko blow karne ke liye button dabayein.</p><button class="btn gold" id="blow">Blow the candle</button><p id="wishDone" class="script" style="font-size:1.4rem;margin-top:20px"></p>
+  </section>
+  <section id="page-music" class="section hidden">
+   <div class="eyebrow">A soundtrack for this little world</div><h2>Our Soundtrack 🎵</h2><div class="card"><p>Apne phone se koi audio file choose karein. Music start karne ke liye button dabayein — browser bina click ke music auto-play nahi karta.</p><input class="field" type="file" id="musicFile" accept="audio/*"><audio id="audio" controls loop style="width:100%;margin-top:12px"></audio><p class="small muted">Apni pasand ka gaana use karein jise share karne ka aapko haq ho.</p></div>
+  </section>
+  <section id="page-personalize" class="section hidden">
+   <div class="eyebrow">Make it yours</div><h2>Personalize Your World 🪄</h2><div class="card"><p>Yahan se apni personal files preview kar sakti hain. Files select karne par woh aapke current browser mein load hoti hain; website link ke saath doosre phone par dikhane ke liye files ko website folder/hosting mein upload karna hoga.</p>
+   <label>Cover photo<input class="field" type="file" id="coverFile" accept="image/*"></label><img id="coverPreview" class="preview hidden" alt="Your cover photo">
+   <label>Video memory<input class="field" type="file" id="videoFile" accept="video/*"></label><video id="videoPreview" class="preview hidden" controls></video>
+   <label>Write a personal line<textarea id="personalLine" class="field" placeholder="Yahan apna message likhein..."></textarea></label><button class="btn" id="savePersonal">Save line in this browser</button><p id="personalSaved" class="small muted"></p>
+   </div>
+   <div class="card" style="margin-top:18px"><h3>Before sharing</h3><ul><li>Apni actual photos/videos website ke folder mein add karein.</li><li>Password ko HTML file ke andar change karein.</li><li>Public hosting par upload karne se pehle personal media ki privacy check karein.</li></ul><p class="small muted">Note: Is starter website ka password gate client-side hai, is liye technical taur par secure/private vault nahi hai. Real privacy ke liye server-side password protection wali hosting use karein.</p></div>
+  </section>
+  <section id="page-ending" class="section hidden center">
+   <div class="eyebrow">One last thing, Ashan…</div><h2 class="script">A world full of little memories</h2><div class="portal">♥</div>
+   <div class="card"><p style="font-size:1.15rem">Aapki zindagi ka har naya saal khushiyon, sukoon aur kamyabi se bhara ho. Aur hamari kahani ke jo bhi panne aage likhe jayen, woh sachai, izzat aur dil ki achhai se likhe jayen.</p><h2 class="script">Happy Birthday, Ashan ✨</h2><p>12 January 2024 se lekar aaj tak — kuch accidental, kuch unexpected, aur bohat kuch mere liye yaadgaar.</p><p class="muted">Aapki birthday world yahin khatam hoti hai, lekin yaadein apni jagah rehti hain. ♥</p><button class="btn" data-page="world">Explore again ↻</button></div>
+  </section>
+  <div class="footer">Made with love, for Ashan ♥<br><span class="small">A little world for a story that means a lot.</span></div>
+ </main>
+</div>
+<script>
+// Change this before sharing. This is a client-side gate, not secure server authentication.
+const SECRET_PASSWORD = "ashan2026";
+const $ = s => document.querySelector(s);
+const pages = ["home","world","story","memories","wishes","games","letter","custom","music","personalize","ending"];
+function showPage(name){pages.forEach(p=>$("#page-"+p)?.classList.toggle("hidden",p!==name));window.scrollTo({top:0,behavior:"smooth"});}
+$("#enter").addEventListener("click",()=>{if($("#pass").value===SECRET_PASSWORD){$("#gate").classList.add("hidden");$("#site").classList.remove("hidden");showPage("home")}else{$("#passmsg").textContent="Password match nahi hua. Dobara try karein.";$("#passmsg").style.color="#ff8ab8"}});
+$("#pass").addEventListener("keydown",e=>{if(e.key==="Enter")$("#enter").click()});
+document.addEventListener("click",e=>{const b=e.target.closest("[data-page]");if(b){showPage(b.dataset.page)}});
+const wishes=[
+"Allah aapki har achhi dua qabool kare, aapki mehnat mein barkat de aur aapko hamesha sukoon naseeb ho. Ameen. 🤍",
+"Aap chahe kitne bhi busy hon, hamari woh chhoti chhoti baatein aur yaadein mere liye hamesha special rahengi. ♥",
+"Main chahti hoon aap apne sapne poore karein, apni mehnat par fakhar karein aur zindagi mein bohat aage barhein. Happy Birthday, Ashan! ✨"
+];
+document.querySelectorAll("[data-wish]").forEach(b=>b.addEventListener("click",()=>{b.textContent="♡";b.disabled=true;$("#wishText").innerHTML="<h3>Reason No. "+(Number(b.dataset.wish)+1)+" ♥</h3><p>"+wishes[Number(b.dataset.wish)]+"</p>"}));
+document.querySelectorAll(".giftbox").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".giftbox").forEach(x=>x.disabled=true);const gifts=["A bonus hug, wrapped in pixels. 🫶","A wish for your success, peace and happiness. ✨","A reminder: you are someone's very special person. ♥"];$("#giftResult").textContent=gifts[Number(b.dataset.gift)]}));
+document.querySelectorAll(".quiz").forEach(b=>b.addEventListener("click",()=>{$("#quizResult").textContent=b.dataset.correct==="true"?"Bilkul sahi! 12 January 2024 — woh accidental snap wali shaam. ♥":"Thora sa ghalat, dobara yaad karein 😊";}));
+$("#openLetter").addEventListener("click",()=>{$("#letterContent").classList.toggle("hidden");$("#openLetter").textContent=$("#letterContent").classList.contains("hidden")?"💌":"💗"});
+$("#blow").addEventListener("click",()=>{$("#candle").textContent="🌟";$("#wishDone").textContent="Your wish is on its way. ✨";$("#blow").textContent="Wish sent ♥"});
+function previewFile(input,el,kind){input.addEventListener("change",()=>{const f=input.files&&input.files[0];if(!f)return;const url=URL.createObjectURL(f);el.src=url;el.classList.remove("hidden");if(kind==="audio")el.load()})}
+previewFile($("#musicFile"),$("#audio"),"audio");previewFile($("#coverFile"),$("#coverPreview"));previewFile($("#videoFile"),$("#videoPreview"));
+$("#galleryFiles").addEventListener("change",()=>{const g=$("#gallery");g.innerHTML="";[...$("#galleryFiles").files].forEach(f=>{const url=URL.createObjectURL(f),wrap=document.createElement("div");wrap.className="mediaitem";let el;if(f.type.startsWith("video/")){el=document.createElement("video");el.controls=true}else{el=document.createElement("img");el.alt=f.name}el.src=url;el.className="preview";wrap.appendChild(el);const cap=document.createElement("p");cap.className="small muted";cap.textContent=f.name;wrap.appendChild(cap);g.appendChild(wrap)})});
+$("#saveCaption").addEventListener("click",()=>{try{localStorage.setItem("ashanCaption",$("#captionInput").value);$("#captionSaved").textContent="Caption is saved in this browser ♥"}catch(e){$("#captionSaved").textContent="Is browser mein save nahi ho saka."}});
+$("#savePersonal").addEventListener("click",()=>{try{localStorage.setItem("ashanPersonalLine",$("#personalLine").value);$("#personalSaved").textContent="Aapka message is browser mein save ho gaya ♥"}catch(e){$("#personalSaved").textContent="Is browser mein save nahi ho saka."}});
+</script>
+</body>
+</html>
